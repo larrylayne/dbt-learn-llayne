@@ -4,4 +4,4 @@ select
     CAST(AMOUNT as integer)/100 as amount_usd,
     STATUS as payment_status
 
-from raw.stripe.payment
+from {{ source('stripe', 'payment') }}

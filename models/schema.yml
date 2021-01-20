@@ -34,3 +34,14 @@ models:
           - accepted_values:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
 
+  - name: orders
+    description: A running list of orders by order id
+    columns:
+      - name: order_id
+        description: Primary key
+        tests:
+          - unique
+          - not null
+      - name: customer_id
+        tests:
+          - not null

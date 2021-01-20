@@ -11,7 +11,7 @@ orders as (
            order_date
            
     from {{ ref('stg_orders')}}
-    where status != 'returned'
+    --where status != 'returned'
 
 ),
 
